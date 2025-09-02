@@ -43,7 +43,7 @@ def parse_discipline(w_file, disp: Discipline):
         w_file.write(f"DTEND;VALUE=DATE-TIME:{date}T{disp.end_time}\n")
 
         w_file.write(f"LOCATION:{disp.address}\n")
-        w_file.write("SUMMARY;LANGUAGE=en-us:Встреча на факультете/ОП\n")
+        w_file.write(f"SUMMARY;LANGUAGE=en-us:{disp.name}\n")
         w_file.write("TRANSP:TRANSPARENT\n")
         w_file.write("END:VEVENT\n")
 
